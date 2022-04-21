@@ -1,11 +1,11 @@
 ﻿Import-Module ExchangeOnlineManagement
-Connect-ExchangeOnline -UserPrincipalName avrublevsky@linquest.com -ShowProgress $true -ConnectionUri https://outlook.office365.us/powershell-liveid -AzureADAuthorizationEndPointUri https://login.microsoftonline.us/common 
-Connect-IPPSSession -UserPrincipalName avrublevsky@linquest.com  -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ 
+Connect-ExchangeOnline -UserPrincipalName admin@contoso.com -ShowProgress $true -ConnectionUri https://outlook.office365.us/powershell-liveid -AzureADAuthorizationEndPointUri https://login.microsoftonline.us/common 
+Connect-IPPSSession -UserPrincipalName admin@contoso.com  -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ 
 
 Install-Module Hawk
 Import-Module Hawk
 start-hawktenantinvestigation 
-Start-HawkUserInvestigation -User alex.vrublevsky@linquest.com 
+Start-HawkUserInvestigation -User admin@contoso.com 
 Get-HawkTenantAzureAuthenticationLogs
 
 MSOnline
